@@ -2,6 +2,7 @@
     'use strict';
 
     var SETTINGS = {
+        selector: '.uc-slider1',
         autoplay: false,
         autoplayDelay: 4000,
         animationDuration: 750,
@@ -11,7 +12,6 @@
         dragResistance: 0.35
     };
 
-    var SLIDER_SELECTOR = '.uc-slider1';
     var COPY_ATTRIBUTE = 'data-infinite-copy';
 
     function hasClass(element, name) {
@@ -558,7 +558,7 @@
     }
 
     function initAll() {
-        var sliders = document.querySelectorAll(SLIDER_SELECTOR);
+        var sliders = document.querySelectorAll(SETTINGS.selector);
         var i;
 
         for (i = 0; i < sliders.length; i += 1) {
@@ -587,4 +587,3 @@
         boot();
     }
 }());
-
